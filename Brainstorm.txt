@@ -1,11 +1,11 @@
 ﻿NAME IDEAS:
 Votes   Name
    03   The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
-   03   Pupdate‏
+   03   The Huskflow Standard
+   03   The Pupdate‏ Standard
    02   Blue Husky Open Auto Update Standard (BH-OAUS, /bi-etʃ wɒ́s/)
    02   The Huskdate Standard, or Huskdate: An Auto Update Standard‏
-   02   The Huskflow Standard
-   02   Updog‏
+   02   The Updog‏ Standard
    01   Blue Husky Open Standard for Automatic Updates (BH-OSfAU, /bi-etʃ ɒ́s-faw/)
    01   The Blue Update Standard
 
