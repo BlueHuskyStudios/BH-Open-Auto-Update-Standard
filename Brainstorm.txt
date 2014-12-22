@@ -4,9 +4,9 @@ Votes   Name
    02   The Huskdate Standard, or Huskdate: An Auto Update Standard‏
    02   The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
    02   The Huskflow Standard
+   02   Pupdate‏
    01   Blue Husky Open Standard for Automatic Updates (BH-OSfAU, /bi-etʃ ɒ́s-faw/)
    01   The Blue Update Standard
-   01   Pupdate‏
    01   Updog‏
 
 MAJOR GOALS:
