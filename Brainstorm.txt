@@ -4,6 +4,8 @@
 	The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
 	The Blue Update Standard
 	The Huskdate Standard
+	Updog‏
+	Pupdate‏
 
 MAJOR GOALS:
 1: To end, once and for all, dialogs that say "click here to go to our website to download the latest version"
