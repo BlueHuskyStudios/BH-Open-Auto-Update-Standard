@@ -1,11 +1,11 @@
 ﻿NAME IDEAS:
-	Blue Husky Open Auto Update Standard (BH-OAUS, /bi-etʃ wɒ́s/)
-	Blue Husky Open Standard for Automatic Updates (BH-OSfAU, /bi-etʃ ɒ́s-faw/)
-	The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
-	The Blue Update Standard
-	The Huskdate Standard
-	Updog‏
-	Pupdate‏
+	02	The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
+	02	The Huskdate Standard, or Huskdate: An Auto Update Standard‏
+	02	Blue Husky Open Auto Update Standard (BH-OAUS, /bi-etʃ wɒ́s/)
+	01	Blue Husky Open Standard for Automatic Updates (BH-OSfAU, /bi-etʃ ɒ́s-faw/)
+	01	The Blue Update Standard
+	01	Pupdate‏
+	01	Updog‏
 
 MAJOR GOALS:
 1: To end, once and for all, dialogs that say "click here to go to our website to download the latest version"
