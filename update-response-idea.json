@@ -1,0 +1,11 @@
+{
+	"version": "1.2.0",
+	"changes": [
+		{"+": "Added an 'OK' button"},
+		{"-": "Removed 'Heck yeah!' button"},
+		{"!": "Fixed bug where affirmative button did nothing"},
+		{".": "Moved action buttons to the right"},
+		{"x": "Found bug where 'OK' button opens a new dialog"}
+	],
+	"package": "http://prog.BHStudios.org/myApp/myApp_1.0.1.exe"
+}
