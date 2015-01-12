@@ -1,0 +1,44 @@
+﻿The Blue Automation for Renewing Code (The BARC‏ /ðə bɑrk/)
+
+MAJOR GOALS:
+1: To end, once and for all, dialogs that say "click here to go to our website to download the latest version"
+2: To make it easier for developers to implement internal updaters, with optional automation
+3: To make it easy for power users to manually check for updates without the aid of the program in question
+
+IMPLOREMENTS:
+- Implementing The BARC means that you wish to make updating easy for your user. Hopefully, you make it so easy that they do
+  not even know it is happening. As such, you are implored to make this an automatic background process, and require little to
+  no input form the user to initiate and completely carry out the process.
+
+
+CORE TECHNOLOGIES:
+- JSON (to hold data)
+- HTTP(S) or (S)FTP (to transmit data)
+
+ROADMAP:
+1: Preparation
+	1: Research the typical items that are updated when a program needs an update
+	2: Ensure that JSON is, indeed, the best medium to communicate an update's details
+	3: Ensure that all goals are easily attainable
+2: Prototyping (Lambda)
+	1: Set up an environment that can handle all the requirements
+	2: Create a crude implementation of the system to prove the concept
+	3: Refine the proof-of-concept until it works reliably in several scenarios
+3: Presentation
+	1: Present the system to several parties familiar with systems that update software
+	2: Use their feedback to continue to refine the system
+4: Back to the definition
+	1: Ensure all changes made stay within the bounds of the definition. Any discrepancies should be examined as essential and,
+	   if so, the definition should be changed as such.
+5: Alpha
+	1: Create a system that works outside of the test environment
+	2: Put the system and definition up as an open-source Alpha version of The BARC, alongside an issue tracker
+	3: Take any and all issues into consideration
+6: Beta
+	1: Refine the system and definition as needed, using the given issues as useful feedback
+	2: Put the system and definition up as an open-source Beta version of The BARC, alongside an issue tracker
+	3: Take any and all issues into consideration
+7: Stable
+	1: Release the definition 1.0 alongside an issue tracker
+	2: Release the implementation as a separate product
+	3: Begin production on multiple implementations in multiple languages for multiple platforms
