@@ -6,9 +6,9 @@ MAJOR GOALS:
 3: To make it easy for power users to manually check for updates without the aid of the program in question
 
 IMPLOREMENTS:
-- Implementing The BARC means that you wish to make updating easy for your user. Hopefully, you make it so easy that they do
-  not even know it is happening. As such, you are implored to make this an automatic background process, and require little to
-  no input form the user to initiate and completely carry out the process.
+- Implementing The BARC means that you wish to make updating easy for your user. You are implored to make it so easy that they
+  do not even know it is happening. As such, you are implored to make this an automatic background process, and require little
+  to no input form the user to initiate and completely carry out the process.
 - Participating in use of The BARC means that you agree that open standards are good things. As such, you are implored to help
   out by offering your comments, submitting any changed code, and adhering to the included license.
 
