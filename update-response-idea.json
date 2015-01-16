@@ -1,21 +1,21 @@
 {
-	"version": "1.2.0", /* The overall version number of the update. This is arbitrary, but should be easily comparable */
-	"changes": [  /* A changelog */
-		{"+": "Added an 'OK' button"}, /* + indicates something was added */
-		{"-": "Removed 'Heck yeah!' button"}, /* - indicates something was removed */
-		{"!": "Fixed bug where affirmative button did nothing"}, /* ! indicates something was fixed */
-		{".": "Moved action buttons to the right"}, /* . indicates something was changed */
-		{"x": "Found bug where 'OK' button opens a new dialog"} /* x indicates a problem was found but not fixed */
+	"version": "1.2.0",
+	"changes": [
+		{"+": "Added an 'OK' button"},
+		{"-": "Removed 'Heck yeah!' button"},
+		{"!": "Fixed bug where affirmative button did nothing"},
+		{".": "Moved action buttons to the right"},
+		{"x": "Found bug where 'OK' button opens a new dialog"}
 	],
-	"packages": [ /* Items to be downloaded */
+	"packages": [
 		{
-			"source": "http://Prog.BHStudios.org/myApp/myApp_1.0.1.exe", /* Where to download from */
-			"target": "/" /* Where to download to, with root being the application install folder */
+			"source": "http://Prog.BHStudios.org/myApp/myApp_1.0.1.exe",
+			"target": "/"
 		},
 		{
 			"source": "http://Prog.BHStudios.org/myApp/en-CA.lang",
 			"target": "/languages/",
-			"language": "en-CA" /* Optional: the language of the package. This may indicate that the package may be skipped based on user preferences. */
+			"language": "en-CA"
 		}
 	}
 }
