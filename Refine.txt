@@ -53,7 +53,6 @@ A response must include:
 	- ! indicates something was fixed
 	- . indicates something was changed
 	- x indicates a problem was found but not fixed
-	],
 - A list of packages to be downloaded
 	- Where to download from
 	- Where to download to: A URI whose root is the application install folder ("/" might mean "C:/Program Files/My App/")
