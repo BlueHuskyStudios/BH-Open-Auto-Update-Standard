@@ -2,10 +2,12 @@ The Blue Automation for Renewing Code (The BARC)
 ================================================
 A standard for implementing a system in which local applications may automatically poll a remote server for the purpose of updating said application.
 
+**This branch will not contain relevant code until The BARC is in the Stable stage!**
+
 Stage:
 ------
-- Brainstorm
-- **Refine**
+- [Brainstorm](https://github.com/BlueHuskyStudios/The-BARC/tree/Brainstorm)
+- [**Refine**](https://github.com/BlueHuskyStudios/The-BARC/tree/Refine)
 - Mockup
 - Lambda
 - Alpha
