@@ -49,7 +49,7 @@ RESPONSE IDEA:
 A response must include:
 
 - The overall version number of the update. This is arbitrary, but should be easily comparable
-- A changelog
+- A changelog consisting of an array single-pair objects whose keys are single-character symbols and values are fulltext descriptions
 	- + indicates something was added
 	- - indicates something was removed
 	- ! indicates something was fixed
