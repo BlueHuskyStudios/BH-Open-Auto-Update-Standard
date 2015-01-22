@@ -46,16 +46,31 @@ ROADMAP:
 	3: Begin production on multiple implementations in multiple languages for multiple platforms
 
 RESPONSE IDEA:
-A response must include:
+A response includes ([OPT] == optional):
 
-- The overall version number of the update. This is arbitrary, but should be easily comparable
-- A changelog consisting of an array single-pair objects whose keys are single-character symbols and values are fulltext descriptions
+- [OPT] The name of this version
+- The overall version number of the update. This is completely arbitrary, but should be easily comparable
+- A changelog consisting of an array of one or more single-pair objects whose keys are single-character symbols and values are
+  fulltext descriptions
 	- + indicates something was added
 	- - indicates something was removed
 	- ! indicates something was fixed
 	- . indicates something was changed
 	- x indicates a problem was found but not fixed
-- A list of packages to be downloaded
-	- Where to download from
+- [OPT] Requirements, which indicate what is needed to apply the update. If these are met, the update should proceed. If they
+  are not, the program can decide whether to give an error, install the requirements, or attempt the update anyway. The value
+  of this can be either a single string indicating the name of a required item, or an object containing the following:
+	- The name of the required items.
+	- The version number of the required item, with the same spec as the above definition.
+	- [OPT] A boolean indicating whether the provided version must be exactly the same as the installed one. If this is
+	  omitted, it is assumed that a higher version will do.
+- A list of packages to be downloaded, consisting of an array of objects, each with the following:
+	- [OPT] The name of the package
+	- A URI indicating from where to download the package
 	- Where to download to: A URI whose root is the application install folder ("/" might mean "C:/Program Files/My App/")
-	- Optional: the language of the package in ISO 639-1 format. This may indicate that the package may be skipped based on user preferences.
+	- [OPT] the language of the package in ISO 639-1 format. This may indicate that the package may be skipped based on user
+	  preferences.
+	- [OPT] The version number of the package, with the same spec as the above definition.
+	- [OPT] The importance of the package, with 0 being the most important. If omitted, 0 is assumed. This may indicate that
+	the package may be skipped if an error occurs or if one of the requirements is not met.
+	- [OPT] A list of requirements, with the same spec as the above definition.
