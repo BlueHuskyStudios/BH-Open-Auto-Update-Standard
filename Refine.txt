@@ -9,6 +9,9 @@ IMPLOREMENTS:
 - Implementing The BARC means that you wish to make updating easy for your user. You are implored to make it so easy that they
   do not even know it is happening. As such, you are implored to make this an automatic background process, and require little
   to no input form the user to initiate and completely carry out the process.
+	- To keep the user happy, you are implored to provide them with preferences that allow them to change the behavior of the
+	  auto-update process. We recommend including options that let them turn it off, provide feedback when an update is
+	  ready/applying/applied, whether to install right after downloading or wait for user confirmation, et cetera.
 - Participating in use of The BARC means that you agree that open standards are good things. As such, you are implored to help
   out by offering your comments, submitting any changed code, and adhering to the included license.
 
