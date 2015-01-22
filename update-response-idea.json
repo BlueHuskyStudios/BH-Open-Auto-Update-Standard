@@ -29,10 +29,15 @@
 			"target": "/languages/",
 			"version": "1-CA.1",
 			"language": "en-CA",
-			"importance": 2
+			"importance": 2,
+			"requires": {
+				"item": "BH Translator",
+				"version": "1.1.0"
+			}
 		}
 	],
 	"requires": [
+		"Intel x64",
 		{
 			"item": ".NET Framework",
 			"version": "4"
@@ -40,7 +45,7 @@
 		{
 			"item": "Windows NT",
 			"version": "6.3",
-			"geq": true
+			"eq": true
 		}
 	]
 }
