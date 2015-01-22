@@ -1,4 +1,5 @@
 {
+	"name": "Creative Cat"
 	"version": "1.2.0",
 	"changes": [
 		{"+": "Added an 'OK' button"},
@@ -9,13 +10,37 @@
 	],
 	"packages": [
 		{
+			"name": "Main application",
 			"source": "http://Prog.BHStudios.org/myApp/myApp_1.0.1.exe",
-			"target": "/"
+			"target": "/",
+			"version": "1.0.1"
 		},
 		{
+			"name": "Extra goodies",
+			"source": "http://Prog.BHStudios.org/myApp/1.0.1_goodies.zip",
+			"target": "/goodies/goodies.zip",
+			"version": "2015-01-18T1153",
+			"requires": "msvcrt.dll",
+			"importance": 9
+		},
+		{
+			"name": "Canadian language pack",
 			"source": "http://Prog.BHStudios.org/myApp/en-CA.lang",
 			"target": "/languages/",
-			"language": "en-CA"
+			"version": "1-CA.1",
+			"language": "en-CA",
+			"importance": 2
+		}
+	],
+	"requires": [
+		{
+			"item": ".NET Framework",
+			"version": "4"
+		},
+		{
+			"item": "Windows NT",
+			"version": "6.3",
+			"geq": true
 		}
 	]
 }
