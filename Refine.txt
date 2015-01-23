@@ -48,6 +48,14 @@ ROADMAP:
 	2: Release the implementation as a separate product
 	3: Begin production on multiple implementations in multiple languages for multiple platforms
 
+REQUEST IDEA:
+A request need only require the following:
+- The version of BARC MUST be provided as close as possible to the beginning of the transmission, as a key-value pair, where
+  the key is "BARC" and the value is the current version. The format of the version number must be precisely the exact same as
+  the official version number. This is done so the parser knows exactly what to expect. For instance, different transmissions
+  in the same version of BARC should be encoded in the same character encoding (likely UTF-8 or UTF-16).
+- The overall current version number of the app. This is completely arbitrary, but should be easily comparable.
+
 RESPONSE IDEA:
 A response includes ([OPT] == optional):
 
@@ -55,10 +63,10 @@ A response includes ([OPT] == optional):
   the key is "BARC" and the value is the current version. The format of the version number must be precisely the exact same as
   the official version number. This is done so the parser knows exactly what to expect. For instance, different transmissions
   in the same version of BARC should be encoded in the same character encoding (likely UTF-8 or UTF-16).
-- [OPT] The name of this version
-- The overall version number of the update. This is completely arbitrary, but should be easily comparable
+- [OPT] The name of this version.
+- The overall version number of the update. This is completely arbitrary, but should be easily comparable.
 - A changelog consisting of an array of one or more single-pair objects whose keys are single-character symbols and values are
-  fulltext descriptions
+  fulltext descriptions.
 	- + indicates something was added
 	- - indicates something was removed
 	- ! indicates something was fixed
