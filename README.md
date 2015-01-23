@@ -4,8 +4,8 @@ A standard for implementing a system in which local applications may automatical
 
 Stage:
 ------
-- **Brainstorm**
-- Refine
+- Brainstorm <= you are here
+- [**Refine**](https://github.com/BlueHuskyStudios/The-BARC/tree/Refine)
 - Mockup
 - Lambda
 - Alpha
