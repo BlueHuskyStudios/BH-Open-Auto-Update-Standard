@@ -7,7 +7,8 @@
 		{"!": "Fixed bug where affirmative button did nothing"},
 		{".": "Moved action buttons to the right"},
 		{".": "Enabled the close button"},
-		{"x": "Found bug where 'OK' button opens a new dialog"}
+		{"x": "Found bug where 'OK' button opens a new dialog"},
+		{"+": "Added support for Canadian English"}
 	],
 	"packages": [
 		{
@@ -25,7 +26,7 @@
 			"importance": 9
 		},
 		{
-			"name": "Canadian language pack",
+			"name": "Canadian English language pack",
 			"source": "http://Prog.BHStudios.org/myApp/en-CA.lang",
 			"target": "/languages/",
 			"version": "1-CA.1",
