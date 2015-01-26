@@ -25,6 +25,7 @@ ROADMAP:
 	1: Research the typical items that are updated when a program needs an update
 	2: Ensure that JSON is, indeed, the best medium to communicate an update's details
 	3: Ensure that the standard is easily implementable
+	4: Outline the process that a program would go through to implement The BARC
 2: Prototyping (Lambda)
 	1: Set up an environment that can handle all the requirements
 	2: Create a crude implementation of the system to prove the concept
