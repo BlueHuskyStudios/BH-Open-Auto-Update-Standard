@@ -9,9 +9,9 @@ IMPLOREMENTS:
 - Implementing The BARC means that you wish to make updating easy for your user. You are implored to make it so easy that they
   do not even know it is happening. As such, you are implored to make this an automatic background process, and require little
   to no input form the user to initiate and completely carry out the process.
-	- To keep the user happy, you are implored to provide them with preferences that allow them to change the behavior of the
-	  auto-update process. We recommend including options that let them turn it off, provide feedback when an update is
-	  ready/applying/applied, whether to install right after downloading or wait for user confirmation, et cetera.
+    - To keep the user happy, you are implored to provide them with preferences that allow them to change the behavior of the
+      auto-update process. We recommend including options that let them turn it off, provide feedback when an update is
+      ready/applying/applied, whether to install right after downloading or wait for user confirmation, et cetera.
 - Participating in use of The BARC means that you agree that open standards are good things. As such, you are implored to help
   out by offering your comments, submitting any changed code, and adhering to the included license.
 
@@ -22,32 +22,32 @@ CORE TECHNOLOGIES:
 
 ROADMAP:
 1: Preparation
-	1: Research the typical items that are updated when a program needs an update
-	2: Ensure that JSON is, indeed, the best medium to communicate an update's details
-	3: Ensure that the standard is easily implementable
-	4: Outline the process that a program would go through to implement The BARC
+    1: Research the typical items that are updated when a program needs an update
+    2: Ensure that JSON is, indeed, the best medium to communicate an update's details
+    3: Ensure that the standard is easily implementable
+    4: Outline the process that a program would go through to implement The BARC
 2: Prototyping (Lambda)
-	1: Set up an environment that can handle all the requirements
-	2: Create a crude implementation of the system to prove the concept
-	3: Refine the proof-of-concept until it works reliably in several scenarios
+    1: Set up an environment that can handle all the requirements
+    2: Create a crude implementation of the system to prove the concept
+    3: Refine the proof-of-concept until it works reliably in several scenarios
 3: Presentation
-	1: Present the system to several parties familiar with systems that update software
-	2: Use their feedback to continue to refine the system
+    1: Present the system to several parties familiar with systems that update software
+    2: Use their feedback to continue to refine the system
 4: Back to the definition
-	1: Ensure all changes made stay within the bounds of the definition. Any discrepancies should be examined as essential and,
-	   if so, the definition should be changed as such.
+    1: Ensure all changes made stay within the bounds of the definition. Any discrepancies should be examined as essential and,
+       if so, the definition should be changed as such.
 5: Alpha
-	1: Create a system that works outside of the test environment
-	2: Put the system and definition up as an open-source Alpha version of The BARC, alongside an issue tracker
-	3: Take any and all issues into consideration
+    1: Create a system that works outside of the test environment
+    2: Put the system and definition up as an open-source Alpha version of The BARC, alongside an issue tracker
+    3: Take any and all issues into consideration
 6: Beta
-	1: Refine the system and definition as needed, using the given issues as useful feedback
-	2: Put the system and definition up as an open-source Beta version of The BARC, alongside an issue tracker
-	3: Take any and all issues into consideration
+    1: Refine the system and definition as needed, using the given issues as useful feedback
+    2: Put the system and definition up as an open-source Beta version of The BARC, alongside an issue tracker
+    3: Take any and all issues into consideration
 7: Stable
-	1: Release the definition 1.0 alongside an issue tracker
-	2: Release the implementation as a separate product
-	3: Begin production on multiple implementations in multiple languages for multiple platforms
+    1: Release the definition 1.0 alongside an issue tracker
+    2: Release the implementation as a separate product
+    3: Begin production on multiple implementations in multiple languages for multiple platforms
 
 PROCESS IDEA:
 The process of updating should follow these steps. Program is your program, Server is a server with information about your
@@ -55,49 +55,51 @@ program, Request is a transmission as detailed in REQUEST IDEA, Response is a tr
 Sandbox is a directory containing all files and subdirectories necessary to run Program.
 1: Program sets up a slow timer to periodically check for updates. This may be tweaked by the user, but it is recommended it
    goes no faster than firing twice a day.
-	1: Upon timer firing, program constructs a Request
-	2: Program sets up and attempts a connection to Server
-		1: If Server does not respond, Program silently logs this. Program may choose to place a note about this next in the 
-		   same place it allows the user to see the version number (usually About). Program does nothing until next time the
-		   timer fires.
-		2: If Server receives the request, Server notes the version number and begins a lookup to gather the following
-		   information:
-			- Is the version in the request the latest? If so, return an empty Response.
-			- The changes that occurred to the Program between the version sent and the current version
-			- The packages that reflect those changes, and information about these, including any requirements
-			- All requirements needed to run the program in its latest state, REGARDLESS OF THE PROGRAM'S VERSION.
-		3: Server constructs Response using this information
-		4: Using the previously-established connection, Server sends Response back to Program
-		5: Program parses Response
-		6: Program ensures that it meets all the general requirements
-			1: If Program does not meet all general requirements, Program may choose to gracefully fail, or to place a
-			   non-obtrusive notification visible to the user (for instance, a red icon in a corner), or to attempt to install
-			   the requirements.
-			2: If Program successfully installs any unmet requirements, it returns to step 1.2.6
-		7: Program ensures that all reasonably important package requirements are met
-			1: As specified in RESPONSE IDEA, importance is gauged on a scale starting at 0, where 0 is absolutely required. The user or the programmer can specify what level of importance can be ignored.
-			2: Program determines what packages meet the threshold of requirements
-			3: If any package's requirements within that threshold are not met, Program can choose any of the paths outlined in step 1.2.6.1
-			4: Program can only continue if all package requirements within the threshold are met.
-		8: Program sets up a separate Sandbox in which it will place a copy of itself. The name of this Sandbox should be
-		   related to the new version number. For instance, if the program is installed at "C:/Program Files/My App/1.1.0", and
-		   the new version is 1.2.0, then the new Sandbox would be "C:/Program Files/My App/1.2.0".
-		9: Program copies its Sandbox to that Sandbox
-		10:Program begins downloading all the packages it can. These are all packages which meet the threshold of requirement,
-		   and as many outside that threshold as possible.
-		11:Program copies these packages to the destination specified by Response. These should be treated as if their root is
-		   the new Sandbox. For instance, if a package in the same example as in step 1.2.8 comes from 
-		   "http://Prog.BHStudios.org/myApp/1.0.1_goodies.zip" and has a target of "/goodies/goodies.zip", then it should be
-		   saved or moved to "C:/Program Files/My App/1.2.0/goodies/goodies.zip". If a file already exists at this location,
-		   that file should be overwritten.
-		12:After all files are written, Program may decide to delete any Sandboxes older than the current version (in our
-		   example, 1.1.0), but not the current or new versions'.
-		13:Program notifies the operating system that the main executable has moved to the one in the new Sandbox, or Program
-		   may modify necessary system variables directly to achieve this. After this step, the executable in the old Sandbox
-		   should not be runnable except by direct and explicit invocation (docks/taskbars/shortcuts/launchers/etc. should not
-		   launch the old executable. This can be accomplished with a dummy executable that does nothing but launch the current
-		   version of Program).
-		13:Program may choose to encourage the user to exit or restart Program. If so, this must be done in a non-obtrusive way.
+    1: Upon timer firing, program constructs a Request
+    2: Program sets up and attempts a connection to Server
+        1: If Server does not respond, Program silently logs this. Program may choose to place a note about this next in the 
+           same place it allows the user to see the version number (usually About). Program does nothing until next time the
+           timer fires.
+        2: If Server receives the request, Server notes the version number and begins a lookup to gather the following
+           information:
+            - Is the version in the request the latest? If so, return an empty Response.
+            - The changes that occurred to the Program between the version sent and the current version
+            - The packages that reflect those changes, and information about these, including any requirements
+            - All requirements needed to run the program in its latest state, REGARDLESS OF THE PROGRAM'S VERSION.
+        3: Server constructs Response using this information
+        4: Using the previously-established connection, Server sends Response back to Program
+        5: Program parses Response
+        6: Program ensures that it meets all the general requirements
+            1: If Program does not meet all general requirements, Program may choose to gracefully fail, or to place a
+               non-obtrusive notification visible to the user (for instance, a red icon in a corner), or to attempt to install
+               the requirements.
+            2: If Program successfully installs any unmet requirements, it returns to step 1.2.6
+        7: Program ensures that all reasonably important package requirements are met
+            1: As specified in RESPONSE IDEA, importance is gauged on a scale starting at 0, where 0 is absolutely required.
+               The user or the programmer can specify what level of importance can be ignored.
+            2: Program determines what packages meet the threshold of requirements
+            3: If any package's requirements within that threshold are not met, Program can choose any of the paths outlined
+               in step 1.2.6.1
+            4: Program can only continue if all package requirements within the threshold are met.
+        8: Program sets up a separate Sandbox in which it will place a copy of itself. The name of this Sandbox should be
+           related to the new version number. For instance, if the program is installed at "C:/Program Files/My App/1.1.0", and
+           the new version is 1.2.0, then the new Sandbox would be "C:/Program Files/My App/1.2.0".
+        9: Program copies its Sandbox to that Sandbox
+        10:Program begins downloading all the packages it can. These are all packages which meet the threshold of requirement,
+           and as many outside that threshold as possible.
+        11:Program copies these packages to the destination specified by Response. These should be treated as if their root is
+           the new Sandbox. For instance, if a package in the same example as in step 1.2.8 comes from 
+           "http://Prog.BHStudios.org/myApp/1.0.1_goodies.zip" and has a target of "/goodies/goodies.zip", then it should be
+           saved or moved to "C:/Program Files/My App/1.2.0/goodies/goodies.zip". If a file already exists at this location,
+           that file should be overwritten.
+        12:After all files are written, Program may decide to delete any Sandboxes older than the current version (in our
+           example, 1.1.0), but not the current or new versions'.
+        13:Program notifies the operating system that the main executable has moved to the one in the new Sandbox, or Program
+           may modify necessary system variables directly to achieve this. After this step, the executable in the old Sandbox
+           should not be runnable except by direct and explicit invocation (docks/taskbars/shortcuts/launchers/etc. should not
+           launch the old executable. This can be accomplished with a dummy executable that does nothing but launch the current
+           version of Program).
+        13:Program may choose to encourage the user to exit or restart Program. If so, this must be done in a non-obtrusive way.
 
 REQUEST IDEA:
 A request need only require the following:
@@ -114,25 +116,25 @@ A response includes ([OPT] == optional):
 - The overall version number of the update. This is completely arbitrary, but should be easily comparable.
 - A changelog consisting of an array of one or more single-pair objects whose keys are single-character symbols and values are
   fulltext descriptions.
-	- + indicates something was added
-	- - indicates something was removed
-	- ! indicates something was fixed
-	- . indicates something was changed
-	- x indicates a problem was found but not fixed
+    - + indicates something was added
+    - - indicates something was removed
+    - ! indicates something was fixed
+    - . indicates something was changed
+    - x indicates a problem was found but not fixed
 - [OPT] Requirements, which indicate what is needed to apply the update. If these are met, the update should proceed. If they
   are not, the program can decide whether to give an error, install the requirements, or attempt the update anyway. The value
   of this can be either a single string indicating the name of a required item, or an object containing the following:
-	- The name of the required items.
-	- The version number of the required item, with the same spec as the above definition.
-	- [OPT] A boolean indicating whether the provided version must be exactly the same as the installed one. If this is
-	  omitted, it is assumed that a higher version will do.
+    - The name of the required items.
+    - The version number of the required item, with the same spec as the above definition.
+    - [OPT] A boolean indicating whether the provided version must be exactly the same as the installed one. If this is
+      omitted, it is assumed that a higher version will do.
 - A list of packages to be downloaded, consisting of an array of objects, each with the following:
-	- [OPT] The name of the package
-	- A URI indicating from where to download the package
-	- Where to download to: A URI whose root is the application install folder ("/" might mean "C:/Program Files/My App/")
-	- [OPT] the language of the package in ISO 639-1 format. This may indicate that the package may be skipped based on user
-	  preferences.
-	- [OPT] The version number of the package, with the same spec as the above definition.
-	- [OPT] The importance of the package, with 0 being the most important. If omitted, 0 is assumed. This may indicate that
-	the package may be skipped if an error occurs or if one of the requirements is not met.
-	- [OPT] A list of requirements, with the same spec as the above definition.
+    - [OPT] The name of the package
+    - A URI indicating from where to download the package
+    - Where to download to: A URI whose root is the application install folder ("/" might mean "C:/Program Files/My App/")
+    - [OPT] the language of the package in ISO 639-1 format. This may indicate that the package may be skipped based on user
+      preferences.
+    - [OPT] The version number of the package, with the same spec as the above definition.
+    - [OPT] The importance of the package, with 0 being the most important. If omitted, 0 is assumed. This may indicate that
+    the package may be skipped if an error occurs or if one of the requirements is not met.
+    - [OPT] A list of requirements, with the same spec as the above definition.
