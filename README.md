@@ -5,7 +5,7 @@ A standard for implementing a system in which local applications may automatical
 Stage:
 ------
 - [Brainstorm](https://github.com/BlueHuskyStudios/The-BARC/tree/Brainstorm)
-- Refine
+- [Refine](https://github.com/BlueHuskyStudios/The-BARC/tree/Refine)
 -  <span style="text-decoration:underline">**Mockup**</span> <= you are here
 - Lambda
 - Alpha
